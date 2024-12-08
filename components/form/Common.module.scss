@@ -1,0 +1,79 @@
+@import "styles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & .input {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem;
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $input-border-focus-color;
+      box-shadow: 0 0 5px $input-border-focus-color;
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  & .label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: $label-color;
+  }
+
+  & .genderSelect {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.5rem;
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $input-border-focus-color;
+      box-shadow: 0 0 5px $input-border-focus-color;
+    }
+  }
+
+  & .submitButton {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: $btn-bg-color;
+    color: $btn-text-color;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $btn-hover-bg-color;
+    }
+  }
+
+  & .error {
+    border-color: $error-border-color;
+    background-color: $error-bg-color;
+    box-shadow: 0 0 5px $error-border-color;
+  }
+
+  & .errorMessage {
+    margin-top: 0.25rem;
+    color: $error-text-color;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+}
